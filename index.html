@@ -6,14 +6,77 @@
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
+	
+
+	
+
+
+
+
 	<link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
 	<div class="container">
-		<input type="text" class="btn btn-primary">
+
+		<div class="jumbotron text-center">
+			<!-- <img src="assets/images/thomas_logo1.jpg" alt="" height="300"> -->
+		</div>
+
+
+		<div class="panel panel-primary">
+		  <div class="panel-heading">Current Train Schedule</div>
+		  <div class="panel-body">
+		  	<table class="table table-striped">
+				<thead class="text-center">
+					<tr>
+						<td>Train Name</td>
+						<td>Destination</td>
+						<td>Frequency (min)</td>
+						<td>Next Arrival</td>
+						<td>Minutes Away</td>
+					</tr>
+				</thead>
+				<tbody class="tbody text-center">
+					
+				</tbody>
+		  	</table>
+
+		  </div>
+		</div>
+
+
+		<div class="panel panel-primary">
+		  <div class="panel-heading">Add a train</div>
+		  <div class="panel-body">
+		  	<div class="form-group">
+			  <label for="trainName">Train Name:<span class="trainName"></span></label>
+			  <input type="text" class="form-control" id="trainName" >
+			</div>
+
+			<div class="form-group">
+			  <label for="destination">Destination:<span class="destination"></span></label>
+			  <input type="text" class="form-control" id="destination">
+			</div>
+
+			<div class="form-group">
+			  <label for="trainTime">First Train Time (HH:mm - Military Time):<span class="trainTime"></span></label>
+			  <input type="text" class="form-control" id="trainTime">
+			</div>
+
+			<div class="form-group">
+			  <label for="frequency">Frequency (min):<span class="frequency"></span></label>
+			  <input type="text" class="form-control" id="frequency">
+			</div>
+
+			<input type="button" class="btn btn-primary"  value="Input Train" id="submit">
+		  </div>
+		</div>
 	</div>
 
-	<script   src="https://code.jquery.com/jquery-3.2.1.js"   integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="   crossorigin="anonymous"></script>
+
+	<script src="https://www.gstatic.com/firebasejs/4.5.0/firebase.js"></script>
+	<script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+	<script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
 	<script src="assets/js/script.js"></script>
 
 </body>
